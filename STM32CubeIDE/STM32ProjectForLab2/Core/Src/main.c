@@ -89,7 +89,7 @@ int main(void)
   MX_GPIO_Init();
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-  HAL_TIM_Base_Start_IT(& htim2);
+  HAL_TIM_Base_Start_IT(& htim2); /*function to initialize the timer*/
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -213,6 +213,8 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+/*Interrupt function
+ *This function is called every 10 ms*/
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 
 }
