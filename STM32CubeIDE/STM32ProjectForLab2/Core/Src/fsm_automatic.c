@@ -6,7 +6,11 @@
  */
 #include "fsm_automatic.h"
 
-/* Function to display number on led*/
+/*
+ * Function to display a number on a specified led
+ * num: order of led to display number
+ * num_to_display: number to be displayed on led
+ * */
 void TurnLed(int num, int num_to_display)
 {
 
@@ -172,5 +176,52 @@ void blink_dot(void)
 	default:
 		break;
 
+	}
+}
+
+/* Function to scan led using update7SEG() function*/
+void scan_led(void)
+{
+	switch(scan_led_status)
+	{
+	case INIT:
+		update7SEG(4); /* Turn of all 7-segment led*/
+		scan_led_status = LED0;
+		setTimer2(ON_TIME);
+		break;
+	case LED0:
+		update7SEG(0); /* Turn on only led 0*/
+		if(timer2_flag == 1)
+		{
+			setTimer2(ON_TIME);
+			scan_led_status = LED1;
+		}
+		break;
+	case LED1:
+		update7SEG(1); /* Turn on only led 0*/
+		if(timer2_flag == 1)
+		{
+			setTimer2(ON_TIME);
+			scan_led_status = LED2;
+		}
+		break;
+	case LED2:
+		update7SEG(2); /* Turn on only led 0*/
+		if(timer2_flag == 1)
+		{
+			setTimer2(ON_TIME);
+			scan_led_status = LED3;
+		}
+		break;
+	case LED3:
+		update7SEG(3); /* Turn on only led 0*/
+		if(timer2_flag == 1)
+		{
+			setTimer2(ON_TIME);
+			scan_led_status = LED0;
+		}
+		break;
+	default:
+		break;
 	}
 }

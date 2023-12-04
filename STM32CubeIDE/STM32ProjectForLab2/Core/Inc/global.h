@@ -31,7 +31,7 @@ typedef enum
 	BLINK_ON,
 	BLINK_OFF
 } BLINK_STATUS;
-
+extern BLINK_STATUS blink_status;
 /* For blink dot*/
 typedef enum
 {
@@ -39,8 +39,9 @@ typedef enum
 	DOT_ON,
 	DOT_OFF
 } BLINK_DOT;
+
 extern BLINK_DOT blink_dot_status;
 
-extern BLINK_STATUS blink_status;
+
 
 #endif /* INC_GLOBAL_H_ */

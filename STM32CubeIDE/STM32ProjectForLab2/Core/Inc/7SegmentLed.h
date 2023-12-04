@@ -16,4 +16,7 @@ void display7SEG(int num);
 /* Function to display number on led*/
 void update7SEG(int index);
 
+extern int index_led;
+extern const int MAX_LED;
+
 #endif /* INC_7SEGMENTLED_H_ */

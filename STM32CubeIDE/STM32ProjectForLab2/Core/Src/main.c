@@ -101,8 +101,9 @@ int main(void)
   while (1)
   {
 	  blink_led();
-	  fsm_automatic_run();
+//	  fsm_automatic_run();
 	  blink_dot();
+	  scan_led();
 //	  /* Turn of the first 7-segment led*/
 //	  HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, GPIO_PIN_SET);
 //	  /* Turn on the second 7-segment led*/

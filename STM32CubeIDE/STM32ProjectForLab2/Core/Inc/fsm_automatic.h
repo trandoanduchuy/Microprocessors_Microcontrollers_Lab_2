@@ -34,4 +34,6 @@ void blink_led(void);
 
 void blink_dot(void);
 
+void scan_led();
+
 #endif /* INC_FSM_AUTOMATIC_H_ */
