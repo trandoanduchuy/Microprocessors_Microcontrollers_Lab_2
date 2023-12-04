@@ -10,7 +10,7 @@
 
 #include "global.h"
 
-#define ON_TIME	250
+#define ON_TIME	500
 
 #define BLINK_ON_TIME	500
 #define BLINK_OFF_TIME	500
