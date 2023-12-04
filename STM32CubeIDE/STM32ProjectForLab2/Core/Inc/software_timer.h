@@ -20,6 +20,11 @@ extern int timer2_flag;
 
 void setTimer2(int duration);
 
+extern int time3_counter;
+extern int timer3_flag;
+
+void setTimer3(int duration);
+
 void timerRun();
 
 

@@ -11,13 +11,16 @@
 #include "main.h"
 #include "software_timer.h"
 #include "7SegmentLed.h" /*Library for control 7-segment led*/
+#include "stdlib.h"
 
 /* For scan led*/
 typedef enum
 {
 	INIT,
+	LED0,
 	LED1,
-	LED2
+	LED2,
+	LED3
 }SCAN_LED_STATUS;
 extern SCAN_LED_STATUS scan_led_status;
 
@@ -28,6 +31,15 @@ typedef enum
 	BLINK_ON,
 	BLINK_OFF
 } BLINK_STATUS;
+
+/* For blink dot*/
+typedef enum
+{
+	DOT_INIT,
+	DOT_ON,
+	DOT_OFF
+} BLINK_DOT;
+extern BLINK_DOT blink_dot_status;
 
 extern BLINK_STATUS blink_status;
 

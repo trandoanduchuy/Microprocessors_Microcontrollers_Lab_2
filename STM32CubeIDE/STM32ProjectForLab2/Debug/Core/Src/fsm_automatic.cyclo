@@ -1,2 +1,5 @@
-fsm_automatic.c:10:6:fsm_automatic_run	7
-fsm_automatic.c:46:6:blink_led	7
+fsm_automatic.c:10:6:TurnLed	5
+fsm_automatic.c:50:6:DisplayNumber	1
+fsm_automatic.c:62:6:fsm_automatic_run	10
+fsm_automatic.c:114:6:blink_led	7
+fsm_automatic.c:147:6:blink_dot	7
