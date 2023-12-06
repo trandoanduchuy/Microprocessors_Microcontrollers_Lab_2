@@ -71,7 +71,7 @@ void timerRun(){
 		timer4_counter--;
 		if(timer4_counter <= 0)
 		{
-			timer4_flag = 0;
+			timer4_flag = 1;
 		}
 	}
 }

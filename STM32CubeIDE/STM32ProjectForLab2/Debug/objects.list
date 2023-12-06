@@ -1,4 +1,5 @@
 "./Core/Src/7SegmentLed.o"
+"./Core/Src/DigitalClock.o"
 "./Core/Src/fsm_automatic.o"
 "./Core/Src/global.o"
 "./Core/Src/main.o"

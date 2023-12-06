@@ -10,8 +10,13 @@
 
 #include "global.h"
 
-extern int hour;
-extern int minute;
-extern int second;
+extern unsigned int clock_buffer[];
+
+/* Function to update values of elements of clock_buffer*/
+void updateClockBuffer();
+
+
+/* Function to update second, minute, hour every second*/
+void DigitalClock();
 
 #endif /* INC_DIGITALCLOCK_H_ */

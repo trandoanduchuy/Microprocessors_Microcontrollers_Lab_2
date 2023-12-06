@@ -1,2 +1,3 @@
 ../Core/Src/7SegmentLed.c:14:6:display7SEG	16	static
 ../Core/Src/7SegmentLed.c:118:6:update7SEG	16	static
+../Core/Src/7SegmentLed.c:160:6:DisplayNumberOnLed	16	static

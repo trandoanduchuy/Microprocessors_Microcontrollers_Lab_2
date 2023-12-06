@@ -1,0 +1,2 @@
+../Core/Src/DigitalClock.c:15:6:updateClockBuffer	4	static
+../Core/Src/DigitalClock.c:23:6:DigitalClock	8	static

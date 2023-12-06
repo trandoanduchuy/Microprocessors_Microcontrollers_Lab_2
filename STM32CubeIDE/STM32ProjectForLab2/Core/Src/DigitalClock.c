@@ -6,13 +6,21 @@
  */
 #include "DigitalClock.h"
 
-int hour = 15;
-int minute = 8;
-int second = 50;
+unsigned int hour = 15;
+unsigned int minute = 8;
+unsigned int second = 50;
 
+unsigned int clock_buffer[4] = {0, 0, 0, 0};
 
+void updateClockBuffer()
+{
+	clock_buffer[0] = hour/10;
+	clock_buffer[1] = hour%10;
+	clock_buffer[2] = minute/10;
+	clock_buffer[3] = minute%10;
+}
 
-int DigitalClock()
+void DigitalClock()
 {
 	if(timer4_flag == 1)
 	{
@@ -33,4 +41,8 @@ int DigitalClock()
 			hour = 0;
 		}
 	}
+	updateClockBuffer();
 }
+
+
+

@@ -1,0 +1,25 @@
+/*
+ * DigitalClock.h
+ *
+ *  Created on: Dec 4, 2023
+ *      Author: Huy
+ */
+
+#ifndef INC_DIGITALCLOCK_H_
+#define INC_DIGITALCLOCK_H_
+
+#include "global.h"
+
+//extern int hour;
+//extern int minute;
+//extern int second;
+
+extern unsigned int clock_buffer;
+
+/* Function to update second, minute, hour every second*/
+void DigitalClock();
+
+/* Function to update values of second, minute and hour*/
+void updateClockBuffer(void);
+
+#endif /* INC_DIGITALCLOCK_H_ */

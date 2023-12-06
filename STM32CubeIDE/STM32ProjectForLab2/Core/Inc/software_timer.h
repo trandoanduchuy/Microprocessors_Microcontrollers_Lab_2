@@ -8,6 +8,8 @@
 #ifndef INC_SOFTWARE_TIMER_H_
 #define INC_SOFTWARE_TIMER_H_
 
+#include "global.h"
+
 #define TICK	10
 
 extern int timer1_counter;

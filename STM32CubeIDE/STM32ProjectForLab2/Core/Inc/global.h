@@ -13,35 +13,8 @@
 #include "7SegmentLed.h" /*Library for control 7-segment led*/
 #include "fsm_automatic.h"
 #include "stdlib.h"
+#include "DigitalClock.h"
 
-/* For scan led*/
-typedef enum
-{
-	INIT,
-	LED0,
-	LED1,
-	LED2,
-	LED3
-}SCAN_LED_STATUS;
-extern SCAN_LED_STATUS scan_led_status;
-
-/* For blink led red*/
-typedef enum
-{
-	BLINK_INIT,
-	BLINK_ON,
-	BLINK_OFF
-} BLINK_STATUS;
-extern BLINK_STATUS blink_status;
-/* For blink dot*/
-typedef enum
-{
-	DOT_INIT,
-	DOT_ON,
-	DOT_OFF
-} BLINK_DOT;
-
-extern BLINK_DOT blink_dot_status;
 
 
 
