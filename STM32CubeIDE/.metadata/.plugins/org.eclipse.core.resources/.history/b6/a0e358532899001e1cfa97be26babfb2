@@ -1,0 +1,20 @@
+/*
+ * led_matrix.h
+ *
+ *  Created on: Dec 12, 2023
+ *      Author: Huy
+ */
+
+#ifndef INC_LED_MATRIX_H_
+#define INC_LED_MATRIX_H_
+
+#include "global.h"
+
+/* Function to turn on a col*/
+void TurnOnCol(int col);
+
+/* Function to turn on row*/
+void TurnOnRow(int row);
+
+
+#endif /* INC_LED_MATRIX_H_ */

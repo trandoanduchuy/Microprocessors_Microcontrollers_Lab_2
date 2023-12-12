@@ -1,0 +1,12 @@
+/*
+ * led_matrix.c
+ *
+ *  Created on: Dec 12, 2023
+ *      Author: Huy
+ */
+
+#include "led_matrix.h"
+
+const int MAX_LED_MATRIX = 8;
+int index_led_matrix = 0;
+

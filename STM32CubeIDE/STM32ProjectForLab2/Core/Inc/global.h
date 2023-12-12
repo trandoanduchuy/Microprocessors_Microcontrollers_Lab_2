@@ -14,6 +14,7 @@
 #include "fsm_automatic.h"
 #include "stdlib.h"
 #include "DigitalClock.h"
+#include "led_matrix.h"
 
 
 

@@ -25,7 +25,8 @@ Core/Src/7SegmentLed.o: ../Core/Src/7SegmentLed.c \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Core/Inc/software_timer.h ../Core/Inc/7SegmentLed.h \
- ../Core/Inc/fsm_automatic.h ../Core/Inc/DigitalClock.h
+ ../Core/Inc/fsm_automatic.h ../Core/Inc/DigitalClock.h \
+ ../Core/Inc/led_matrix.h
 ../Core/Inc/7SegmentLed.h:
 ../Core/Inc/global.h:
 ../Core/Inc/main.h:
@@ -57,3 +58,4 @@ Core/Src/7SegmentLed.o: ../Core/Src/7SegmentLed.c \
 ../Core/Inc/7SegmentLed.h:
 ../Core/Inc/fsm_automatic.h:
 ../Core/Inc/DigitalClock.h:
+../Core/Inc/led_matrix.h:

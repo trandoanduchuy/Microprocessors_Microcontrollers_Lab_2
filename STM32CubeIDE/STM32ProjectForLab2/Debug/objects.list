@@ -2,6 +2,7 @@
 "./Core/Src/DigitalClock.o"
 "./Core/Src/fsm_automatic.o"
 "./Core/Src/global.o"
+"./Core/Src/led_matrix.o"
 "./Core/Src/main.o"
 "./Core/Src/software_timer.o"
 "./Core/Src/stm32f1xx_hal_msp.o"

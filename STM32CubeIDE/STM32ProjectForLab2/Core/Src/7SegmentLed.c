@@ -156,7 +156,9 @@ void update7SEG(int index)
 	}
 }
 
-/* Function to display number on 7-segment led*/
+/* Function to display number on 7-segment led
+ * led: the order of the led which is going to be turned on
+ * value_buffer: array stores the values to be display*/
 void DisplayNumberOnLed(int led, unsigned int* value_buffer)
 {
 	switch(led)
