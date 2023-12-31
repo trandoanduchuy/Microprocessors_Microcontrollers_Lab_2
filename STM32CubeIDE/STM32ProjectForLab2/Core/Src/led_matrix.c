@@ -11,6 +11,8 @@ const int MAX_LED_MATRIX = 8;
 int index_led_matrix = 0;
 unsigned char matrix_buffer[8] = {0xEF, 0x03, 0xED, 0xEE, 0xEE, 0xED, 0x03, 0xEF};
 
+LED_MATRIX_STATUS led_matrix_status = LED_MATRIX_INIT;
+
 void updateLEDMatrix(int index)
 {
 	switch(index)
@@ -184,7 +186,94 @@ void updateLEDMatrix(int index)
 		HAL_GPIO_WritePin(ROW7_GPIO_Port, ROW7_Pin, ((matrix_buffer[7] >> 7) & 0x01));
 		break;
 	default:
+		/* Turn of all cols -> set all ENM*/
+		HAL_GPIO_WritePin(ENM0_GPIO_Port, ENM0_Pin, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(ENM1_GPIO_Port, ENM1_Pin, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(ENM2_GPIO_Port, ENM2_Pin, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(ENM3_GPIO_Port, ENM3_Pin, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(ENM4_GPIO_Port, ENM4_Pin, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(ENM5_GPIO_Port, ENM5_Pin, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(ENM6_GPIO_Port, ENM6_Pin, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(ENM7_GPIO_Port, ENM7_Pin, GPIO_PIN_SET);
 		break;
 	}
 }
 
+
+void LedMatrixDisplay(void)
+{
+	switch(led_matrix_status)
+	{
+	case LED_MATRIX_INIT:
+		updateLEDMatrix(8); /* Turn off all cols*/
+		led_matrix_status = COL0;
+		setTimer2(DISPLAY_TIME_OF_A_COL);
+		break;
+	case COL0:
+		updateLEDMatrix(0);	/* Turn on col 0*/
+		if(timer2_flag == 0)
+		{
+			setTimer2(DISPLAY_TIME_OF_A_COL);
+			led_matrix_status = COL1;
+		}
+		break;
+	case COL1:
+		updateLEDMatrix(1);	/* Turn on col 1*/
+		if(timer2_flag == 0)
+		{
+			setTimer2(DISPLAY_TIME_OF_A_COL);
+			led_matrix_status = COL2;
+		}
+		break;
+	case COL2:
+		updateLEDMatrix(2);	/* Turn on col 2*/
+		if(timer2_flag == 0)
+		{
+			setTimer2(DISPLAY_TIME_OF_A_COL);
+			led_matrix_status = COL3;
+		}
+		break;
+	case COL3:
+		updateLEDMatrix(3);	/* Turn on col 3*/
+		if(timer2_flag == 0)
+		{
+			setTimer2(DISPLAY_TIME_OF_A_COL);
+			led_matrix_status = COL4;
+		}
+		break;
+	case COL4:
+		updateLEDMatrix(4);	/* Turn on col 4*/
+		if(timer2_flag == 0)
+		{
+			setTimer2(DISPLAY_TIME_OF_A_COL);
+			led_matrix_status = COL5;
+		}
+		break;
+	case COL5:
+		updateLEDMatrix(5);	/* Turn on col 5*/
+		if(timer2_flag == 0)
+		{
+			setTimer2(DISPLAY_TIME_OF_A_COL);
+			led_matrix_status = COL6;
+		}
+		break;
+	case COL6:
+		updateLEDMatrix(6);	/* Turn on col 6*/
+		if(timer2_flag == 0)
+		{
+			setTimer2(DISPLAY_TIME_OF_A_COL);
+			led_matrix_status = COL7;
+		}
+		break;
+	case COL7:
+		updateLEDMatrix(7);	/* Turn on col 7*/
+		if(timer2_flag == 0)
+		{
+			setTimer2(DISPLAY_TIME_OF_A_COL);
+			led_matrix_status = COL0;
+		}
+		break;
+	default:
+		break;
+	}
+}

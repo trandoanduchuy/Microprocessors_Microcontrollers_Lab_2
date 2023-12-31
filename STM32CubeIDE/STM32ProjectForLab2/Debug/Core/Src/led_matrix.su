@@ -1,1 +1,2 @@
-../Core/Src/led_matrix.c:14:6:updateLEDMatrix	16	static
+../Core/Src/led_matrix.c:16:6:updateLEDMatrix	16	static
+../Core/Src/led_matrix.c:203:6:LedMatrixDisplay	8	static
