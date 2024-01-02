@@ -1282,3 +1282,11 @@
 2023-12-04 14:17:07,476 [INFO] ProjectBuilder:2867 - Time for Copy CMSIS : 0mS.
 2023-12-04 14:25:22,392 [ERROR] AdobePublisher:162 - Exception while opening the connection: java.net.SocketTimeoutException: Read timed out
 2023-12-04 14:25:27,716 [ERROR] AdobePublisher:183 - Exception while getting the server answer: java.net.SocketTimeoutException: Read timed out
+2024-01-03 00:44:45,744 [INFO] Activator:176 - 
+
+
+2024-01-03 00:44:45,746 [INFO] Activator:177 - !SESSION log4j initialized
+2024-01-03 00:44:51,270 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2024-01-03 00:45:13,794 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2024-01-03 00:45:13,796 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2024-01-03 00:45:13,798 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
