@@ -200,4 +200,5 @@ void DisplayNumberOnLed(int led, unsigned int* value_buffer)
 		display7SEG(value_buffer[0]);
 		break;
 	}
+
 }

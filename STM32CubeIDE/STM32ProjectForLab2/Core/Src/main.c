@@ -104,16 +104,15 @@ int main(void)
 	  /*********************************************************************************
 	   EXERCISE 05
 	  *********************************************************************************/
-	  blink_led();
-	  blink_dot();
-	  DigitalClock();
-	  scan_led(clock_buffer);
+	  blink_led();		/*Finite state machine to blink red led*/
+	  blink_dot();		/*Finite state machine to blink the dot*/
+	  DigitalClock();	/*Function to update value of hour, minute and second*/
+	  scan_led(clock_buffer);	/**/
 
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
   }
-  free(clock_buffer);
   /* USER CODE END 3 */
 }
 
