@@ -113,7 +113,6 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
   }
-  free(clock_buffer);
   /* USER CODE END 3 */
 }
 
